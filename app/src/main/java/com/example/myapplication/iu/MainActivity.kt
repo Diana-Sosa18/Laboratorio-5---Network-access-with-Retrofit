@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.iu
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -7,10 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.myapplication.iu.PokemonAppTheme
-import com.example.myapplication.iu.PokemonNavigation
-import com.example.myapplication.iu.PokemonViewModel
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,8 +18,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    val viewModel: PokemonViewModel = viewModel()
-                    PokemonNavigation(viewModel = viewModel)
+                    PokemonNavigation()
                 }
             }
         }
